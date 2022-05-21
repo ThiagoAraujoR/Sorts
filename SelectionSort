@@ -1,0 +1,25 @@
+
+import java.util.Arrays;
+
+public class InsertionSort {
+
+    public static void main(String[] args) {
+        int[] vet = {10,9,8,7,6,5,4,3,2,1};
+        System.out.println("Vetor desordenado:");
+        System.out.println(Arrays.toString(vet));
+
+        for (int i = 1; i < vet.length; i++) {
+            int valueToSort = vet[i];
+            int j = i;
+            while (j > 0 && vet[j - 1] > valueToSort) { 
+                vet[j] = vet[j - 1];
+                j--;
+            }
+            vet[j] = valueToSort;
+            System.out.println(Arrays.toString(vet));
+        }
+    }
+
+}
+    
+
